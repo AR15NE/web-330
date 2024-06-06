@@ -3,9 +3,112 @@
   Chapter 1
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Amanda Rovey
+  Date: 6/4/2024
+  Filename: Assignment 2.2
 */
 
-/* Your CSS goes here */
+/* CSS Variables to establish theme */
+:root {
+  --background-color: #0a0a0a; /* Dark background for overall page contrast */
+  --main-text-color: #ff5555; /* Main text color for consistency and readability */
+  --accent-color: #860000; /* Accent color used for interactive elements */
+  --border-color: #8b0000; /* Border color to complement the accent color */
+  --container-bg-color: #1a1a1a; /* Container background for content emphasis */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color); 
+  background-image: url('images/red.png'); 
+  background-size: cover; /* Ensures background image covers entire page */
+  font-family: 'Gothic A1', sans-serif; 
+}
+
+/* Main Container */
+#mainContainer {
+  max-width: 600px; 
+  margin: 30px auto; 
+  padding: 20px;
+  background-color: var(--container-bg-color);
+  border: 2px solid var(--accent-color); 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px 5px var(--border-color); 
+}
+
+/* Form Elements */
+label {
+  color: var(--main-text-color);
+  margin-top: 15px;
+}
+
+input[type="text"],
+select {
+  width: 100%; 
+  padding: 10px; 
+  margin-top: 5px; 
+  background-color: #333333; 
+  border: 1px solid var(--border-color); 
+  color: #ffffff; 
+  border-radius: 4px; 
+}
+
+/* Buttons */
+button {
+  width: 100%; 
+  padding: 10px; 
+  margin-top: 20px; 
+  background-color: var(--accent-color); 
+  color: #ffffff; 
+  border: none; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+  cursor: alias;
+}
+
+/* Animations */
+@keyframes flicker {
+  0%, 100% { opacity: 1; } /* Full opacity at start and end of animation */
+  20% { opacity: 0.6; } /* Reduced opacity for flicker effect */
+}
+
+#generateHero {
+  animation: flicker 3s infinite; /* Apply flicker animation to generate button for attention */
+}
+
+/* Character Output */
+#characterOutput {
+  display: flex; /* Flexbox for layout flexibility and alignment */
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px; 
+  margin-top: 20px; /* Margin above container to separate from form */
+  background-color: #262626; /* Dark background for contrast with character information */
+  color: var(--main-text-color); 
+  border: 2px solid var(--accent-color);
+  border-radius: 8px; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px var(--border-color); 
+}
+
+#characterInfo {
+  flex: 1; 
+  padding-right: 60px; 
+}
+
+#characterImageContainer {
+  flex: none; 
+  display: flex; /* Flexbox for image container for alignment */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+#characterImage {
+  padding-top: 30px; 
+  display: block;
+  max-width: 100%; 
+  height: auto;
+}

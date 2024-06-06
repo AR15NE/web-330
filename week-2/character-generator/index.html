@@ -6,25 +6,32 @@
     Chapter 1
     Programming Assignment
 
-    Author:
-    Date:
-    Filename:
+    Author: Amanda Rovey
+    Date: 6/4/2024
+    Filename: Assignment 2.2
   -->
     <title>Roleplay Character Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+  
+    
   </head>
   <body>
     <div id="mainContainer">
+      <!--Character creation form where users input their hero's detials-->
       <form id="characterForm">
         <label for="heroName">Hero Name:</label><br />
         <input type="text" id="heroName" name="heroName" required /><br />
-        <label for="heroGender">Hero Gender:</label><br />
+
+        <!--Drop down for selecting the hero's gender-->
+        <label for="heroGender">Hero Gender:</label><br />       
         <select id="heroGender" name="heroGender" required>
           <option value="">Select...</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option></select>
           <br />
+
+        <!--Drop down for selecting the hero's class-->  
         <label for="heroClass">Hero Class:</label><br />
         <select id="heroClass" name="heroClass" required>
           <option value="">Select...</option>
@@ -32,12 +39,30 @@
           <option value="mage">Mage</option>
           <option value="rogue">Rogue</option></select>
           <br />
-        <button id="generateHero">Generate Hero</button>
+
+          <!-- Generate button to submit the form and trigger character creation -->
+        <button type="submit" id="generateHero">Generate Hero</button>
       </form>
 
-      <div id="characterOutput"></div>
-    </div>
+      <!--Container for displaying the users created character-->
+      <div id="characterOutput">
+        <div id="characterInfo"></div> <!-- This div will contain the character information -->
+        <div id="characterImageContainer">
+          <img id="characterImage" src="" alt="Character Image" style="display:none;" />
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!--Background music-->
+      <audio id="backgroundMusic" autoplay loop>
+        <source src="music/mmorpgmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Button to control music playback, placed at the bottom of the page -->
+        <div id="musicControlContainer" style="text-align:center; padding:20px;">
+        <button id="musicControlButton">Play/Pause Music</button>
+      </div>
+
+    <script src="script.js"></script> <!--Placed at the end of the file to ensure the Dom is fully loaded before the js elements -->
   </body>
 </html>
