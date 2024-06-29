@@ -1,3 +1,5 @@
+"use strict"; /* Added */
+
 /*
   Pragmatic JavaScript
   Chapter 2
@@ -27,7 +29,7 @@ function reserveTable(tableNumber, callback, time) {
   let table = tables.find(t => t.tableNumber === tableNumber);
   if (table && !table.isReserved) {
     table.isReserved = true;
-    // Display the success message immediately
+    // Display the success message
     callback(`Table ${tableNumber} reserved successfully.`);
     // Reset the reservation status after the specified time
     setTimeout(() => {
@@ -42,16 +44,16 @@ function reserveTable(tableNumber, callback, time) {
 document.getElementById("reservationForm").addEventListener("submit", function (e) {
   e.preventDefault(); 
 
-  // Get the name and table number from the form
+  // Get the name and table number
   const name = document.getElementById("name").value;
   const tableNumber = parseInt(document.getElementById("tableNumber").value);
   const messageElement = document.getElementById("message");
 
   // Call the reserveTable function with the table number, a callback, and a time
   reserveTable(tableNumber, function(message) {
-    // Update the webpage with the success or error message
+    // Update the webpage with the message
     messageElement.textContent = message;
-  }, 10000); // Reserve the table for 10 seconds
+  }, 10000); // Reserve the table for 10 seconds for testing purposes 
 });
 
 // Function to populate the table dropdown
