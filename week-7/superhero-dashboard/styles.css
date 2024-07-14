@@ -3,9 +3,52 @@
   Chapter 3
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Amanda Rovey
+  Date: 7/10/2024
+  Filename: styles.css
 */
 
-/* Add your CSS styles here */
+body {
+  background-color: #f5f5dc;
+  font-family: 'Garamond', serif;
+  background-image: url('images/chef.png');
+  background-size: cover; /* Ensure the background image covers the entire body */
+}
+
+h1 {
+  text-align: center;
+  color: #f0f8ff; 
+  font-size: 3em;
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff; 
+  font-size: 2em;
+  padding: 10px;
+}
+
+.chef {
+  border: 2px solid #006400; /* Sets a DarkGreen border */
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 248, 220, 0.8);
+  box-shadow: 10px 10px 5px grey;
+  transition: all 0.3s ease;
+}
+
+.chef:hover {
+  transform: scale(1.05); /* Slightly increases the size of the element when hovered over */
+  box-shadow: 15px 15px 10px grey;
+}
+
+.chef h2 {
+  color: #006400; 
+  font-size: 2em;
+}
+
+.chef p {
+  color: #000000; 
+  line-height: 1.6;  /* Increase the space between lines of text */
+}
