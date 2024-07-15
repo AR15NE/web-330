@@ -3,9 +3,85 @@
   Chapter 4
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Amanda Rovey
+  Date: 7/15/2024
+  Filename: styles.css
 */
 
-/* Add your styles here */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.theater-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #5c2a29;
+  background: url('theater-curtains.png') center center no-repeat;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #e3b23c;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.form-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#movie-form input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#movie-form button {
+  padding: 10px 20px;
+  background-color: #e3b23c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'MedievalSharp', cursive;
+  box-shadow: 2px 2px 4px #000;
+}
+
+#movie-form button:hover {
+  background-color: #d1a123;
+}
+
+#movie-display {
+  padding: 20px;
+  background-color: rgba(28, 28, 28, 0.8);
+  border-radius: 8px;
+}
+
+#movie-info h2 {
+  color: #e3b23c;
+  margin-bottom: 10px;
+}
+
+#movie-info p {
+  margin-bottom: 5px;
+  color: azure;
+}
+
+#error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 20px;
+}

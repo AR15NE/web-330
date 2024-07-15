@@ -1,31 +1,45 @@
+<!--
+  Pragmatic JavaScript
+  Chapter 4
+  Programming Assignment
+
+  Author: Amanda Rovey
+  Date: 7/15/2024
+  Filename: index.html
+-->
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--
-      Pragmatic JavaScript
-      Chapter 4
-      Programming Assignment
-
-      Author:
-      Date:
-      Filename:
-    -->
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
+<head>
+  <title>Fantasy Movie Theater</title>
+  <!-- Link to Google font for styling -->
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+  <div class="theater-container">
+    <header>
+      <h1>Fantasy Movie Directory</h1>
+    </header>
     <div class="form-container">
+      <!-- Form for user input, triggers movie search on submit -->
       <form id="movie-form">
         <input type="text" id="title-input" placeholder="Enter movie title" />
         <button type="submit">Search</button>
       </form>
+    </div>
+    <!-- Section where movie details will be displayed after search -->
+    <div id="movie-display">
       <div id="movie-info">
         <h2 id="movie-title"></h2>
         <p id="movie-director"></p>
         <p id="movie-year"></p>
         <p id="movie-synopsis"></p>
       </div>
+      <!-- Error messages are displayed here if the search has no results -->
       <p id="error-message"></p>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
